@@ -48,5 +48,5 @@ export const dataEmployee: Employee[] = [
     group: 'Marketing',
     description: new Date('2022-02-10'),
   },
-  // Sisipkan data karyawan lainnya dengan properti id yang unik
+
 ];

@@ -12,17 +12,19 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
+import { RouterLink } from '@angular/router';
+import { MatIcon } from '@angular/material/icon';
 
 
 @Component({
   selector: 'app-list-employee',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule, MatButtonModule,RouterLink,MatIcon],
   templateUrl: './list-employee.component.html',
   styleUrl: './list-employee.component.css'
 })
 export class ListEmployeeComponent implements AfterViewInit {
-  displayedColumns: string[] = ['username', 'email', 'status'];
+  displayedColumns: string[] = ['username', 'email', 'status','details'];
   dataSource = new MatTableDataSource<Employee>(dataEmployee);
   AddData = [...dataEmployee]
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';

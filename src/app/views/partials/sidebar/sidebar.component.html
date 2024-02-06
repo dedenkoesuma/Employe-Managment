@@ -12,8 +12,10 @@
             <a mat-list-item routerLink="/">Home</a>
             <a mat-list-item routerLink="/list">List Employee</a>
             <a mat-list-item routerLink="/add">Add Employee</a>
-            <a mat-list-item routerLink=".">Hello 3</a>
-            <a mat-list-item routerLink=".">Hello 4</a>
+            <ng-container *ngFor="let employee of EmployeID">
+              <a mat-list-item [routerLink]="'/detail/' + employee.id">Detail Employee</a>
+            </ng-container>
+            
         </mat-nav-list>
       </mat-sidenav>
   
